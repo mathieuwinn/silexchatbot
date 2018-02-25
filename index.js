@@ -23,3 +23,16 @@ app.get("/webhook", function (req, res) {
     res.sendStatus(403);
   }
 });
+
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[
+    {
+      "payload":"Greeting"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAcSEWH7Fs4BALAuY0xZAHk1zX5YV5t1AS2PuY8lY7V0gnbau1USKYQBQP5eiF3mgp18TpbZCWqH3nwF0JBOhIZCnT4FhLUGiwmmriVvf1fGRXmhjw6lNXWIImW4TXQU2F6hsssDYQpWqpk6djcr6TjrJhStXoMZBfZAcz4aelAZDZD"
