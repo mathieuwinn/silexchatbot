@@ -49,9 +49,9 @@ function processPostback(event) {
       } else {
         var bodyObj = JSON.parse(body);
         name = bodyObj.first_name;
-        greeting = "Hi " + name + ". ";
+        greeting = "Hi " + name + "! ";
       }
-      var message = greeting + "My name is SP Movie Bot. I can tell you various details regarding movies. What movie would you like to know about?";
+      var message = greeting + "Welcome to the Silex Project. What can we do for you?";
       sendMessage(senderId, {text: message});
     });
   }
